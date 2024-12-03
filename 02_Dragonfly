@@ -1,0 +1,26 @@
+interface HasWings {
+    public int getNumberOfWings();
+}
+abstract class Insect implements HasWings {
+   abstract public int getNumberOfLegs();
+}
+public class Dragonfly extends Insect {
+
+    @Override
+    public int getNumberOfLegs() {
+        return 6; 
+    }
+
+    @Override
+    public int getNumberOfWings() {
+        return 4;  
+    }
+
+   
+    public static void main(String[] args) {
+        Dragonfly dragonfly = new Dragonfly();
+      
+        System.out.println(" Legs: " + dragonfly.getNumberOfLegs());
+        System.out.println(" Wings: " + dragonfly.getNumberOfWings());
+    }
+}
